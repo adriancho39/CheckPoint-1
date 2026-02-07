@@ -1,0 +1,133 @@
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 20px;
+    font-family: Arial, sans-serif; /* Fallback font */
+}
+
+/* Common spacing for clarity */
+div[class^="grid"] {
+    margin-bottom: 20px;
+    border: 1px solid #ccc; /* Optional: adds visibility to containers */
+}
+
+/* Grid 1 */
+.gridOne {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+/* Grid 2 */
+.gridTwo {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    gap: 10px;
+}
+
+.gridTwo-child-1 {
+    background-color: red;
+    padding: 10px;
+}
+
+.gridTwo-child-2 {
+    background-color: blue;
+    padding: 10px;
+}
+
+.gridTwo-child-3 {
+    background-color: yellow;
+    padding: 10px;
+}
+
+/* Grid 3 */
+.gridThree {
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    width: 500px;
+    height: 300px;
+}
+
+.gridThree-child-text {
+    background-color: #f0f0f0; /* added for visibility */
+    padding: 10px;
+}
+
+.gridThree-child-img img {
+    width: 500px;
+    height: 225px;
+    object-fit: cover;
+    display: block; /* Removes bottom space */
+}
+
+/* Grid 4 */
+.gridFour {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    width: 500px;
+    background-color: green;
+}
+
+.gridFour-child-1 {
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8); /* visibility */
+}
+
+#gridFour-child-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.6); /* visibility */
+}
+
+/* Grid 5 */
+.gridFive {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    width: 500px;
+    background-color: green;
+}
+
+.gridFive-child-1 {
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8); /* visibility */
+}
+
+#gridFive-child-2 {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* 1st image 2x width of 2nd */
+    gap: 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.6); /* visibility */
+}
+
+#gridFive-child-2 img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Grid 6 */
+.gridSix {
+    display: grid;
+    grid-template-columns: 1fr 3fr; /* 2nd col 3x size of 1st */
+    width: 500px;
+    background-color: lightgray;
+    align-items: center;
+    padding: 10px;
+}
+
+.gridSix i {
+    font-size: 2em; /* Adjusted size for visibility */
+    text-align: center;
+}
+
+.google-font-text {
+    font-family: 'Roboto', sans-serif;
+}
