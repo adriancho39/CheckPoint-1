@@ -7,13 +7,14 @@
 
 body {
     padding: 20px;
-    font-family: Arial, sans-serif; /* Fallback font */
+    font-family: Arial, sans-serif;
+    /* Fallback font */
 }
 
 /* Common spacing for clarity */
 div[class^="grid"] {
     margin-bottom: 20px;
-    border: 1px solid #ccc; /* Optional: adds visibility to containers */
+    /* Removed border as per feedback */
 }
 
 /* Grid 1 */
@@ -21,13 +22,16 @@ div[class^="grid"] {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
+    background-color: #eee;
+    /* Added background for separation */
+    padding: 10px;
 }
 
 /* Grid 2 */
 .gridTwo {
     display: grid;
     grid-template-columns: 1fr 1fr 2fr;
-    gap: 10px;
+    /* Removed gap as per feedback */
 }
 
 .gridTwo-child-1 {
@@ -51,18 +55,25 @@ div[class^="grid"] {
     grid-template-rows: 1fr 3fr;
     width: 500px;
     height: 300px;
+    /* Removed border */
 }
 
 .gridThree-child-text {
-    background-color: #f0f0f0; /* added for visibility */
+    background-color: #f0f0f0;
     padding: 10px;
+}
+
+.gridThree-child-img {
+    /* Ensure image container has no extra space */
+    margin: 0;
+    padding: 0;
 }
 
 .gridThree-child-img img {
     width: 500px;
     height: 225px;
     object-fit: cover;
-    display: block; /* Removes bottom space */
+    display: block;
 }
 
 /* Grid 4 */
@@ -75,15 +86,15 @@ div[class^="grid"] {
 
 .gridFour-child-1 {
     padding: 10px;
-    background-color: rgba(255, 255, 255, 0.8); /* visibility */
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 #gridFour-child-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
     padding: 10px;
-    background-color: rgba(255, 255, 255, 0.6); /* visibility */
+    background-color: rgba(255, 255, 255, 0.6);
+    /* Removed gap */
 }
 
 /* Grid 5 */
@@ -96,15 +107,16 @@ div[class^="grid"] {
 
 .gridFive-child-1 {
     padding: 10px;
-    background-color: rgba(255, 255, 255, 0.8); /* visibility */
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 #gridFive-child-2 {
     display: grid;
-    grid-template-columns: 2fr 1fr; /* 1st image 2x width of 2nd */
-    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    /* User requested same width */
     padding: 10px;
-    background-color: rgba(255, 255, 255, 0.6); /* visibility */
+    background-color: rgba(255, 255, 255, 0.6);
+    /* Removed gap */
 }
 
 #gridFive-child-2 img {
@@ -116,7 +128,7 @@ div[class^="grid"] {
 /* Grid 6 */
 .gridSix {
     display: grid;
-    grid-template-columns: 1fr 3fr; /* 2nd col 3x size of 1st */
+    grid-template-columns: 1fr 3fr;
     width: 500px;
     background-color: lightgray;
     align-items: center;
@@ -124,8 +136,10 @@ div[class^="grid"] {
 }
 
 .gridSix i {
-    font-size: 2em; /* Adjusted size for visibility */
-    text-align: center;
+    font-size: 2em;
+    text-align: left;
+    /* Aligned to left */
+    padding-left: 10px;
 }
 
 .google-font-text {
